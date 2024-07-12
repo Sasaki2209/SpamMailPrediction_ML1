@@ -1,0 +1,30 @@
+1. Data Preparation
+Loading Data: The script reads a CSV file containing email data, with each email labeled as either 'spam' or 'ham'.
+Data Cleaning: The script removes trailing commas and ensures that categories are correctly formatted.
+Label Encoding: The 'Category' column is transformed from string labels ('spam' and 'ham') to numerical labels (0 for spam and 1 for ham).
+2. Feature Extraction
+TF-IDF Vectorization: The TfidfVectorizer converts the raw text of emails into numerical features. This transformation is crucial for the ML models, which require numerical input.
+3. Machine Learning Models
+Two different ML models are used for classification:
+
+Logistic Regression
+Model Training: Logistic Regression is a linear model used for binary classification. It estimates the probability that a given input point belongs to a particular category.
+Prediction: The model predicts the class of new emails and calculates the accuracy of predictions on the training data.
+Use Case: Logistic Regression is well-suited for text classification problems with a clear linear separation between classes.
+Naive Bayes
+Model Training: The Naive Bayes classifier is based on applying Bayes' theorem with the “naive” assumption of independence between every pair of features. The script uses MultinomialNB, which is specifically designed for text classification problems and works well when feature vectors represent frequencies.
+Prediction: Similar to Logistic Regression, the Naive Bayes model predicts the class of new emails and computes the accuracy on training data.
+Use Case: Naive Bayes is particularly effective for high-dimensional data like text, making it a popular choice for spam filtering.
+4. Model Evaluation
+Accuracy Calculation: The script computes the accuracy of both models on the training dataset to assess their performance.
+Learning Curve: A learning curve is plotted for the Naive Bayes classifier to visualize the relationship between training size and model performance.
+5. Visualization
+Histogram: The script plots a histogram showing the distribution of email categories (ham vs. spam), which helps in understanding the dataset.
+Methodology Summary
+The methodology for the ML models in this script involves:
+
+Data Preprocessing: Cleaning and preparing data for analysis.
+Feature Extraction: Transforming text data into numerical format using TF-IDF.
+Model Training: Using Logistic Regression and Naive Bayes to learn patterns in the data.
+Model Evaluation: Assessing model performance using accuracy metrics and learning curves.
+Visualization: Plotting data distribution and learning curves to gain insights into the data and model behavior.

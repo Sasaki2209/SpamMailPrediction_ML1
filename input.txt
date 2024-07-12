@@ -1,0 +1,12 @@
+Input:
+
+- The primary input is a CSV file (mail_data.csv) containing email data. It includes two columns: Category (indicating whether an email is spam or ham) and Message (the text of the email).
+
+
+Statistics and Output:
+
+- Accuracy Scores: Shows how well each model performed on the test set.
+- Classification Report: Provides precision, recall, and F1 scores for both models, which are key indicators of model performance.
+- Confusion Matrices: Visual representation of the models' predictions compared to the actual labels.
+- Distribution Plot: Indicates how many spam and ham emails are in the dataset.
+- Learning Curves: Displays how model performance changes with the size of the training dataset.

@@ -1,0 +1,32 @@
+Main Functions of the Code
+1.Data Loading and Preparation:
+
+The script reads data from a CSV file named academic_and_random_mails.csv.
+It ensures the data is formatted correctly by stripping any trailing commas and converting categories into numerical labels ('spam' as 0 and 'ham' as 1).
+
+2.TF-IDF Vectorization:
+
+The script uses TfidfVectorizer to convert text data into numerical features.
+This transformation is crucial for text classification as it transforms raw text into a form that can be processed by machine learning algorithms.
+
+3.Model Training and Comparison:
+
+Logistic Regression without Regularization:
+ A model with a very high C value (set to 1e12), which effectively means no regularization is applied.
+Logistic Regression with Regularization:
+ A model with a typical C value (set to 1.0), meaning regularization is applied.
+Both models are trained on the training set and evaluated on the test set.
+
+4.Model Evaluation:
+
+The script prints the accuracy, classification report, and confusion matrix for both models.
+These metrics provide a detailed look at how well the models perform, including precision, recall, and the balance between false positives and false negatives.
+
+5.Visualization:
+
+Confusion Matrices:
+ Visualizes the classification performance for both models, highlighting the differences in true positives, false positives, true negatives, and false negatives.
+Distribution of Ham and Spam Emails:
+ Displays a count plot showing the distribution of the two categories in the dataset.
+Learning Curves:
+ Plots learning curves for both models to show how training and validation performance evolves with increasing training data size.
